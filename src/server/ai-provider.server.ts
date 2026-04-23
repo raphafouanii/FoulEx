@@ -9,7 +9,7 @@ interface AIProviderConfig {
 
 export function getAIProvider(): AIProviderConfig | null {
   const provider = (process.env.AI_PROVIDER || "").toLowerCase().trim();
-  const apiKey = process.env.API_KEY || "";
+  const apiKey = process.env.API_KEY || " ";
   const lovableKey = process.env.LOVABLE_API_KEY || "";
 
   console.log("[AI DEBUG] AI_PROVIDER env:", provider || "(não definido)");
